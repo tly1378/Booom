@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -19,19 +20,19 @@ public class Player : MonoBehaviour
         Vector3 direction = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
-            direction.z += 1;
+            direction += transform.forward;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            direction.x -= 1;
+            direction -= transform.right;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            direction.z -= 1;
+            direction -= transform.forward;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            direction.x += 1;
+            direction += transform.right;
         }
         rigidbody.AddForce(direction* MoveSpeed);
     }
