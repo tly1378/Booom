@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 88df05cf9a96449469298e670cbf25f5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - HYBoJingTiJ
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b389ad6ccab724e499e54708464aa527, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
