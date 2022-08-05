@@ -1336,10 +1336,10 @@ RectTransform:
   m_Father: {fileID: 441323516}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 21.564087, y: -415.10815}
-  m_SizeDelta: {x: -438.7998, y: 764.9}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 21.564087, y: 130}
+  m_SizeDelta: {x: 2121.2002, y: 764.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550495644
 MonoBehaviour:
@@ -2543,7 +2543,6 @@ GameObject:
   - component: {fileID: 1238780105}
   - component: {fileID: 1238780104}
   - component: {fileID: 1238780103}
-  - component: {fileID: 1238780107}
   m_Layer: 0
   m_Name: Camera0
   m_TagString: Untagged
@@ -2662,14 +2661,6 @@ Transform:
   m_Father: {fileID: 1999508940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &1238780107
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1238780102}
-  m_Enabled: 1
 --- !u!1 &1293134724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3818,10 +3809,10 @@ RectTransform:
   m_Father: {fileID: 1913595142}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 21.564087, y: -415.10815}
-  m_SizeDelta: {x: -438.7998, y: 764.9}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 21.564087, y: 130}
+  m_SizeDelta: {x: 2121.2002, y: 764.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1729413516
 MonoBehaviour:
@@ -4195,7 +4186,6 @@ GameObject:
   - component: {fileID: 1882215533}
   - component: {fileID: 1882215532}
   - component: {fileID: 1882215531}
-  - component: {fileID: 1882215535}
   m_Layer: 0
   m_Name: Camera2
   m_TagString: Untagged
@@ -4314,14 +4304,6 @@ Transform:
   m_Father: {fileID: 1999508940}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 359.9901, y: 0.0004892892, z: 0.0003698687}
---- !u!81 &1882215535
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882215530}
-  m_Enabled: 1
 --- !u!1 &1891985643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,10 +5269,10 @@ RectTransform:
   m_Father: {fileID: 885944996}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 21.564087, y: -415.10815}
-  m_SizeDelta: {x: -438.7998, y: 764.9}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 21.564087, y: 130}
+  m_SizeDelta: {x: 2121.2002, y: 764.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2117280414
 MonoBehaviour:
@@ -6402,7 +6384,6 @@ GameObject:
   - component: {fileID: 1637770144044988991}
   - component: {fileID: 592803483030176732}
   - component: {fileID: 5922286203170641209}
-  - component: {fileID: 5922286203170641210}
   m_Layer: 0
   m_Name: Camera1
   m_TagString: Untagged
@@ -7295,14 +7276,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!81 &5922286203170641210
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2964340353422053800}
-  m_Enabled: 1
 --- !u!1 &5945853158208669910
 GameObject:
   m_ObjectHideFlags: 0

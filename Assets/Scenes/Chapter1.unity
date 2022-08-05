@@ -3092,7 +3092,7 @@ Transform:
   m_GameObject: {fileID: 680746263}
   m_LocalRotation: {x: -0, y: -0.70778334, z: -0, w: 0.70642966}
   m_LocalPosition: {x: 21.14, y: -1.12, z: -14.46}
-  m_LocalScale: {x: 4.6119337, y: 4.9478016, z: 0.39639}
+  m_LocalScale: {x: 4.6119337, y: 7.074367, z: 0.39639}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2017361524}
@@ -8386,9 +8386,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1999508939}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 11.32, y: 0, z: -13.57}
-  m_LocalScale: {x: 2.31, y: 2.31, z: 2.31}
+  m_LocalScale: {x: 2.3100004, y: 2.31, z: 2.3100004}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1542673036}
@@ -8405,7 +8405,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4
+  m_Radius: 0.42
   m_Height: 1.84
   m_Direction: 1
   m_Center: {x: 0, y: 0.85, z: 0}
@@ -8421,7 +8421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd98a8e1e95243b40929f698d00fed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 8
+  MoveSpeed: 15
   sensitivityMouse: 1.12
   camera: {fileID: 5922286203170641208}
 --- !u!54 &1999508944
@@ -9512,7 +9512,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 35
+  m_FocalLength: 30
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -9521,7 +9521,7 @@ Camera:
     height: 1
   near clip plane: 0.099999994
   far clip plane: 1000
-  field of view: 37.84929
+  field of view: 43.60282
   orthographic: 0
   orthographic size: 0.0024
   m_Depth: 0
