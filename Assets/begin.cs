@@ -8,7 +8,7 @@ public class begin : MonoBehaviour
     public GameObject camera0;
     void Start()
     {
-        
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

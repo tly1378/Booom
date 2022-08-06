@@ -11,9 +11,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-        Cursor.visible = false;
     }
-    void Update()
+    void FixedUpdate()
     {
         transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityMouse, 0);
         camera.Rotate(-Input.GetAxis("Mouse Y") * sensitivityMouse,0,0);
@@ -34,6 +33,6 @@ public class Player : MonoBehaviour
         {
             direction += transform.right;
         }
-        rigidbody.AddForce(direction* MoveSpeed);
+        rigidbody.AddForce(MoveSpeed * direction);
     }
 }

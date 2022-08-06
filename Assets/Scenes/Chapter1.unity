@@ -11193,9 +11193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd98a8e1e95243b40929f698d00fed42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 12
+  MoveSpeed: 10
   sensitivityMouse: 1.12
   camera: {fileID: 5922286203170641208}
+  vect: {x: 0, y: 0, z: 0}
 --- !u!54 &1999508944
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12388,14 +12389,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964340353422053800}
-  m_LocalRotation: {x: 0.06569205, y: -0.029706357, z: 0.003136546, w: 0.9973928}
+  m_LocalRotation: {x: -0.3438236, y: 0, z: 0, w: 0.9390343}
   m_LocalPosition: {x: 0.318, y: 0.43, z: -0.038}
   m_LocalScale: {x: 0.18450187, y: 0.18450189, z: 0.18450189}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1142362949}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0.0299979, y: -0.0000002194603, z: -0.0000001054496}
+  m_LocalEulerAnglesHint: {x: -40.22, y: 0, z: 0}
 --- !u!95 &5922286203170641209
 Animator:
   serializedVersion: 4
