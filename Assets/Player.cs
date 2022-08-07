@@ -19,10 +19,10 @@ public class Player : MonoBehaviour
     private void Update()
     {
         transform.Rotate(0, Input.GetAxis("Mouse X") * sensitivityMouse, 0);
-        if (!((Input.GetAxis("Mouse Y") > 0 && angle > angleLimit) || (Input.GetAxis("Mouse Y") < 0 && angle < -angleLimit)))
+        if (!((Input.GetAxis("Mouse Y") > 0 && angle > angleLimit) ||(Input.GetAxis("Mouse Y") < 0 && angle < -angleLimit)))
         {
             angle += Input.GetAxis("Mouse Y") * sensitivityMouse;
-            camera.Rotate(-Input.GetAxis("Mouse Y") * sensitivityMouse, 0, 0);
+            camera.Rotate(-Input.GetAxis("Mouse Y") * sensitivityMouse,0,0);
         }
     }
 
