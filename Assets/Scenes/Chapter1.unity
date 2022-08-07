@@ -1799,7 +1799,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &285130760
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -11882,7 +11882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 40
-  sensitivityMouse: 1.12
+  sensitivityMouse: 2
   camera: {fileID: 5922286203170641208}
 --- !u!54 &1999508944
 Rigidbody:
