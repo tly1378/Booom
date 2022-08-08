@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class InteractableItem : MonoBehaviour
@@ -10,9 +12,8 @@ public class InteractableItem : MonoBehaviour
     static int index;
     static Vector2 position;
     static Transform ui;
-    static TMPro.TMP_Text text;
+    public static InteractableItem target;
 
-    // Start is called before the first frame update
     void Start()
     {
         count++;
@@ -20,28 +21,61 @@ public class InteractableItem : MonoBehaviour
         {
             center = new Vector2(Screen.width / 2, Screen.height / 2);
             ui = GameObject.Find("Canvas/E").transform;
-            text = ui.GetComponent<TMPro.TMP_Text>();
+            //text = ui.GetComponent<TMPro.TMP_Text>();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         if (screenPos.z < 0) return;
         float current_distance = ((Vector2)screenPos - center).sqrMagnitude;
-        print(distance+" "+ current_distance +" "+ (distance > current_distance));
         if (distance > current_distance || index == 1)
         {
             distance = current_distance;
             position = screenPos;
+            target = this;
         }
         if (index >= count)
         {
             index = 0;
-            ui.position = position;
-            //text.text = distance.ToString();
+            //print((transform.position - Camera.main.transform.position).magnitude);
+            if ((transform.position - Camera.main.transform.position).magnitude > 5)
+            {
+                ui.gameObject.SetActive(false);
+                target = null;
+            }
+            else
+            {
+                ui.position = position;
+                ui.gameObject.SetActive(true);
+            }
         }
+    }
+
+    public string className;
+    public string staticMethodName;
+    public void Interact()
+    {
+        try
+        {
+            Type t = Type.GetType(className, true, true);
+            t.InvokeMember(staticMethodName,
+                    BindingFlags.InvokeMethod | BindingFlags.Static | BindingFlags.Public, null, null, new object[] { });
+        }
+        catch(TypeLoadException)
+        {
+            //找不到指定的class
+        }
+        catch (MissingMethodException)
+        {
+            //找不到指定的method
+        }
+    }
+
+    public static void Test()
+    {
+        print("Test");
     }
 }
