@@ -14,6 +14,7 @@ public class InteractableItem : MonoBehaviour
     public static InteractableItem target;
     void Start()
     {
+        ui_e.gameObject.SetActive(false);
         count++;
         if (center == default)
         {
@@ -82,7 +83,7 @@ public class InteractableItem : MonoBehaviour
 
     private void SwitchUI(InteractableItem old_item, InteractableItem new_item)
     {
-        print($"交互按钮由{(old_item == null?"(空)": old_item)}切换至{(new_item == null ? "(空)" : new_item)}。");
+        //print($"交互按钮由{(old_item == null?"(空)": old_item)}切换至{(new_item == null ? "(空)" : new_item)}。");
         if (old_item != null)
         {
             old_item.ui_e.gameObject.SetActive(false);
