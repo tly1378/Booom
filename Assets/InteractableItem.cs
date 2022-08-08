@@ -26,10 +26,10 @@ public class InteractableItem : MonoBehaviour
     static InteractableItem next;
     void Update()
     {
-        if (target != this) 
-            ui_e.gameObject.SetActive(false);
-        else
-            ui_e.gameObject.SetActive(true);
+        //if (target != this) 
+        //    ui_e.gameObject.SetActive(false);
+        //else
+        //    ui_e.gameObject.SetActive(true);
 
         index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
@@ -50,17 +50,13 @@ public class InteractableItem : MonoBehaviour
 
         if (index >= count)
         {
-            if(next == null)
+            if(next != target)
             {
-                target = null;
+                SwitchUI(target, next);
             }
-            else if (next != target)
-            {
-                SwitchUI(target != null ? target.gameObject : null, next != null ? next.gameObject : null);
-                target = next;
-            }
-
+            target = next;
             index = 0;
+            next = null;
         }
     }
 
@@ -84,10 +80,17 @@ public class InteractableItem : MonoBehaviour
         }
     }
 
-    private void SwitchUI(GameObject old_e, GameObject new_e)
+    private void SwitchUI(InteractableItem old_item, InteractableItem new_item)
     {
-        //注意，old_e有可能为null。
-        print($"交互按钮由{(old_e==null?"空":old_e)}切换至{new_e}。");
+        print($"交互按钮由{(old_item == null?"(空)": old_item)}切换至{(new_item == null ? "(空)" : new_item)}。");
+        if (old_item != null)
+        {
+            old_item.ui_e.gameObject.SetActive(false);
+        }
+        if (new_item != null)
+        {
+            new_item.ui_e.gameObject.SetActive(true);
+        }
     }
 
     public static void Test()
