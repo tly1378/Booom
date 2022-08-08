@@ -10,8 +10,7 @@ public class InteractableItem : MonoBehaviour
     static Vector2 center;
     static int count;
     static Vector2 position;
-    public Transform ui_sample;
-    static Transform ui;
+    public Transform ui_e;
     public static InteractableItem target;
     void Start()
     {
@@ -27,8 +26,14 @@ public class InteractableItem : MonoBehaviour
     static InteractableItem next;
     void Update()
     {
+        if (target != this) 
+            ui_e.gameObject.SetActive(false);
+        else
+            ui_e.gameObject.SetActive(true);
+
         index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
+        ui_e.position = screenPos;
         if (screenPos.z < 0)
             return;
 
@@ -51,10 +56,8 @@ public class InteractableItem : MonoBehaviour
             }
             else if (next != target)
             {
-                if (ui != null)
-                    Destroy(ui.gameObject);
+                SwitchUI(target != null ? target.gameObject : null, next != null ? next.gameObject : null);
                 target = next;
-                ui = Instantiate(ui_sample, GameObject.Find("Canvas").transform);
             }
 
             index = 0;
@@ -81,8 +84,14 @@ public class InteractableItem : MonoBehaviour
         }
     }
 
+    private void SwitchUI(GameObject old_e, GameObject new_e)
+    {
+        //注意，old_e有可能为null。
+        print($"交互按钮由{(old_e==null?"空":old_e)}切换至{new_e}。");
+    }
+
     public static void Test()
     {
-        print("Test");
+        print(target.transform.parent.name);
     }
 }
