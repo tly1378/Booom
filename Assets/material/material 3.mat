@@ -198,7 +198,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 0
     - _RimEnabled: 0
-    - _SelfShadingSize: 0.91
+    - _SelfShadingSize: 0.76
     - _SelfShadingSizeExtra: 0.116
     - _ShadowEdgeSize: 0
     - _ShadowEdgeSizeExtra: 0.038
