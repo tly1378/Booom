@@ -9,48 +9,55 @@ public class InteractableItem : MonoBehaviour
     static float distance;
     static Vector2 center;
     static int count;
-    static int index;
     static Vector2 position;
+    public Transform ui_sample;
     static Transform ui;
     public static InteractableItem target;
-
     void Start()
     {
         count++;
         if (center == default)
         {
             center = new Vector2(Screen.width / 2, Screen.height / 2);
-            ui = GameObject.Find("Canvas/E").transform;
             //text = ui.GetComponent<TMPro.TMP_Text>();
         }
     }
 
+    static int index;
+    static InteractableItem next;
     void Update()
     {
         index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-        if (screenPos.z < 0) return;
+        if (screenPos.z < 0)
+            return;
+
         float current_distance = ((Vector2)screenPos - center).sqrMagnitude;
-        if (distance > current_distance || index == 1)
+        if((transform.position - Camera.main.transform.position).sqrMagnitude < 25)
         {
-            distance = current_distance;
-            position = screenPos;
-            target = this;
+            if (distance > current_distance || index == 1)
+            {
+                distance = current_distance;
+                position = screenPos;
+                next = this;
+            }
         }
+
         if (index >= count)
         {
-            index = 0;
-            //print((transform.position - Camera.main.transform.position).magnitude);
-            if ((transform.position - Camera.main.transform.position).magnitude > 5)
+            if(next == null)
             {
-                ui.gameObject.SetActive(false);
                 target = null;
             }
-            else
+            else if (next != target)
             {
-                ui.position = position;
-                ui.gameObject.SetActive(true);
+                if (ui != null)
+                    Destroy(ui.gameObject);
+                target = next;
+                ui = Instantiate(ui_sample, GameObject.Find("Canvas").transform);
             }
+
+            index = 0;
         }
     }
 
