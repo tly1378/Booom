@@ -6,7 +6,7 @@ public class drawing : MonoBehaviour
 {
     public Collider drawC;
     public GameObject text;
-    //public GameObject text1;
+    public GameObject text1;
     private int yes = 0;
     private void OnTriggerEnter(Collider drawC)
     {
@@ -15,17 +15,17 @@ public class drawing : MonoBehaviour
 
             text.SetActive(true);
             Invoke("Delay", 3f);
-            //Invoke("Delay", 6f);
+            Invoke("Delay1", 6f);
             yes = 1;
         }
     }
     void Delay()
     {
         text.SetActive(false);
-       // text1.SetActive(true);
+        text1.SetActive(true);
     }
-    //void Delay1()
-    //{
-     //   text1.SetActive(false);
-   // }
+    void Delay1()
+    {
+        text1.SetActive(false);
+    }
 }
