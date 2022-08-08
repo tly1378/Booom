@@ -27,10 +27,7 @@ public class InteractableItem : MonoBehaviour
     static InteractableItem next;
     void Update()
     {
-        //if (target != this) 
-        //    ui_e.gameObject.SetActive(false);
-        //else
-        //    ui_e.gameObject.SetActive(true);
+        if (Camera.main == null) return;
 
         index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
