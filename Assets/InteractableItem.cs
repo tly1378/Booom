@@ -10,10 +10,12 @@ public class InteractableItem : MonoBehaviour
     static Vector2 center;
     static int count;
     static Vector2 position;
-    public Transform ui_e;
+    private Transform ui_e;
+    public Transform ui_e_sample;
     public static InteractableItem target;
     void Start()
     {
+        ui_e = Instantiate(ui_e_sample, GameObject.Find("Canvas").transform);
         ui_e.gameObject.SetActive(false);
         count++;
         if (center == default)
@@ -27,18 +29,18 @@ public class InteractableItem : MonoBehaviour
     static InteractableItem next;
     void Update()
     {
+        index+=1;
         if (Camera.main == null) return;
 
-        index++;
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         ui_e.position = screenPos;
         if (screenPos.z < 0)
             return;
 
         float current_distance = ((Vector2)screenPos - center).sqrMagnitude;
-        if((transform.position - Camera.main.transform.position).sqrMagnitude < 25)
+        if((transform.position - Camera.main.transform.position).sqrMagnitude < 36)
         {
-            if (distance > current_distance || index == 1)
+            if (distance > current_distance || next == null)
             {
                 distance = current_distance;
                 position = screenPos;
@@ -88,6 +90,7 @@ public class InteractableItem : MonoBehaviour
         if (new_item != null)
         {
             new_item.ui_e.gameObject.SetActive(true);
+            print("new");
         }
     }
 
