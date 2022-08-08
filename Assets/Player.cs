@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
             angle += Input.GetAxis("Mouse Y") * sensitivityMouse;
             camera.Rotate(-Input.GetAxis("Mouse Y") * sensitivityMouse,0,0);
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            InteractableItem.target.Interact();
+        }
     }
 
     void FixedUpdate()
