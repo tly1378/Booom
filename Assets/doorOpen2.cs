@@ -13,11 +13,14 @@ public class doorOpen2 : MonoBehaviour
         if (open == 1)
         {
             door.SetBool("open", true);
+            AudioManager.S.PlayStageSfx(0);
             open = 2;
         }
+
         if (open1 == 1)
         {
             door.SetBool("open2", true);
+            AudioManager.S.PlayStageSfx(0);
             open1 = 2;
         }
 
@@ -31,6 +34,10 @@ public class doorOpen2 : MonoBehaviour
     {
         open1 = 1;
 
+    }
+    public void sound()
+    {
+        AudioManager.S.PlayStageSfx(1);
     }
     public void text()
     {

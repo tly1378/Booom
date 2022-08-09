@@ -12,6 +12,7 @@ public class doorOpen1 : MonoBehaviour
         if(open == 1 )
         {
             door.SetBool("open", true);
+            AudioManager.S.PlayStageSfx(0);
             open = 2;
         }
     }
