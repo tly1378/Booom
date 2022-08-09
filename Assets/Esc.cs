@@ -19,7 +19,7 @@ public class Esc : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             enabled = false;
-            StartCoroutine(Switch(0.5f, ()=> { 
+            StartCoroutine(Switch(1f, ()=> { 
                 buttons.SetActive(true);
                 Player.player.enabled = false;
             }));
