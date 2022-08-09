@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    public AudioSource source;
     void FixedUpdate()
     {
         Vector3 direction = Vector3.zero;
@@ -50,5 +51,19 @@ public class Player : MonoBehaviour
             direction += transform.right;
         }
         rigidbody.AddForce(MoveSpeed * direction);
+        if (direction != Vector3.zero)
+        {
+            if (!source.isPlaying)
+            {
+                source.Play();
+            }
+        }
+        else
+        {
+            if (source.isPlaying)
+            {
+                source.Pause();
+            }
+        }
     }
 }
