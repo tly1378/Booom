@@ -10,7 +10,7 @@ public class telephone : MonoBehaviour
     {
         if (yes == 1)
         {
-
+            AudioManager.S.PlayStageSfx(5);
             text.SetActive(true);
             Invoke("Delay", 2f);
             yes = 0;

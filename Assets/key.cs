@@ -11,6 +11,7 @@ public class key : MonoBehaviour
     {
         if(pick == 1)
         {
+            AudioManager.S.PlayStageSfx(5);
             ke.SetActive(false);
             ui1.SetActive(true);
             door.SetBool("key", true);

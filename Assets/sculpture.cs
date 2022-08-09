@@ -10,6 +10,7 @@ public class sculpture : MonoBehaviour
     {
         if(yes==1)
         {
+            AudioManager.S.PlayStageSfx(5);
             text.SetActive(true);
             Invoke("Delay", 3f);
           //  Invoke("Delay1", 6f);

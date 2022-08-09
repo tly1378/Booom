@@ -23,11 +23,13 @@ public class EventManager : MonoBehaviour
         if (_phonograph.isPlaying)
         {
             _phonograph.Pause();
+            AudioManager.S.PlayStageSfx(2);
             _phonograph_animator.SetBool("on", false);
         }
         else
         {
             _phonograph.Play();
+            AudioManager.S.PlayStageSfx(2);
             _phonograph_animator.SetBool("on", true);
         }
     }
