@@ -4989,7 +4989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!320 &285130760
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -5042,6 +5042,10 @@ PlayableDirector:
   - key: {fileID: 1824814614055218664, guid: fb858e4b1afdd8f418059a8ef25914da, type: 2}
     value: {fileID: 8183115401032668289}
   - key: {fileID: -2141048407367996268, guid: fb858e4b1afdd8f418059a8ef25914da, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5190679590040307336, guid: fb858e4b1afdd8f418059a8ef25914da, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -589568625904873669, guid: fb858e4b1afdd8f418059a8ef25914da, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
@@ -13874,7 +13878,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8FD4\u56DE\u6E38\u620F"
+  m_text: "\u8FD4\u56DE"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125dba9180e4e274aa3e9b7568e6db7c, type: 2}
   m_sharedMaterial: {fileID: 6354872804124258330, guid: 125dba9180e4e274aa3e9b7568e6db7c, type: 2}
@@ -37207,7 +37211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u9000\u51FA\u6E38\u620F"
+  m_text: "\u9000\u51FA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125dba9180e4e274aa3e9b7568e6db7c, type: 2}
   m_sharedMaterial: {fileID: 6354872804124258330, guid: 125dba9180e4e274aa3e9b7568e6db7c, type: 2}
