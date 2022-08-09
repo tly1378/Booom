@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
-    private AudioSource audio;
+    private static AudioSource audio;
     private static int turn = 0;
     public AudioClip liuyinji;
     public Animator liuyin;
@@ -20,12 +20,12 @@ public class Music : MonoBehaviour
         if(turn == 0)
         {
             liuyin.SetBool("on", false);
-            audio.Pause();
+            
         }
         else
         {
             liuyin.SetBool("on", true);
-            audio.Play();
+            
         }
     }
     public static void turnOnOff()
@@ -34,11 +34,13 @@ public class Music : MonoBehaviour
         {
             //liuyin.SetBool("on", true);
             Music.turn = 1;
+            Music.audio.Play();
             Debug.Log("1");
         }
         else
         {
             Music.turn = 0;
+            Music.audio.Pause();
             Debug.Log("2");
         }
 

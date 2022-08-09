@@ -5,7 +5,9 @@ using UnityEngine;
 public class LockBox : MonoBehaviour
 {
     public GameObject cipher1,cipher2,cipher3,cipher4;
+    public GameObject ui1, ui2, ui3, ui4,key;
     public static int one,two,three,four;
+    public Animator lockB;
 
     private void Update()
     {
@@ -17,8 +19,17 @@ public class LockBox : MonoBehaviour
         cipher2.transform.localEulerAngles = new Vector3(0, 0, 36f * two);
         cipher3.transform.localEulerAngles = new Vector3(0, 0, 36f * three);
         cipher4.transform.localEulerAngles = new Vector3(0, 0, 36f * four);
+        if(one == 5 && two == 2 && three == 3 && four == 3)
+        {
+            lockB.SetBool("open", true);
+            ui1.SetActive(false);
+            ui2.SetActive(false);
+            ui3.SetActive(false);
+            ui4.SetActive(false);
+            key.SetActive(true);
+        }
     }
-
+  
     public static void cipherOne()
     {
         one += 1;
