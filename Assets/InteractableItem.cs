@@ -69,14 +69,15 @@ public class InteractableItem : MonoBehaviour
             Type t = Type.GetType(className, true, true);
             t.InvokeMember(staticMethodName,
                     BindingFlags.InvokeMethod | BindingFlags.Static | BindingFlags.Public, null, null, new object[] { });
+            print(name);
         }
         catch(TypeLoadException)
         {
-            //找不到指定的class
+            Debug.LogError("找不到指定的class");
         }
         catch (MissingMethodException)
         {
-            //找不到指定的method
+            Debug.LogError("找不到指定的method");
         }
     }
 
