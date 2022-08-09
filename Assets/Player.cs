@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player player;
+
     public float MoveSpeed;
     public float sensitivityMouse;
     public new Transform camera;
     new Rigidbody rigidbody;
+
     private void Start()
     {
+        player = this;
         rigidbody = GetComponent<Rigidbody>();
     }
 
