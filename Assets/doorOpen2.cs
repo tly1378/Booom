@@ -37,7 +37,7 @@ public class doorOpen2 : MonoBehaviour
     }
     public void sound()
     {
-        AudioManager.S.PlayStageSfx(1);
+        AudioManager.S.PlayPlayerSfx(0);
     }
     public void text()
     {
